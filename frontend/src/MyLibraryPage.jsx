@@ -12,7 +12,7 @@ function MyLibraryPage() {
     const fetchMyBooks = async () => {
       if (!authToken) return;
       try {
-        const response = await axios.get('http://127.0.0.1:8000/api/my-books/', {
+        const response = await axios.get('https://kindle-clone-backend.onrender.com/api/my-books/', {
           headers: { Authorization: `Token ${authToken}` },
         });
         setMyBooks(response.data);

@@ -15,7 +15,7 @@ function ReaderPage() {
 
       try {
         // We use the bookId from the URL to fetch the specific book
-        const response = await axios.get(`http://127.0.0.1:8000/api/books/${bookId}/`, {
+        const response = await axios.get(`https://kindle-clone-backend.onrender.com/api/books/${bookId}/`, {
           headers: {
             Authorization: `Token ${authToken}`,
           },

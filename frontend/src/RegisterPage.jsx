@@ -72,7 +72,7 @@ function RegisterPage() {
         }
         setIsSubmitting(true);
         try {
-            await axios.post('http://127.0.0.1:8000/api/auth/registration/', {
+            await axios.post('https://kindle-clone-backend.onrender.com/api/auth/registration/', {
               username: formData.username,
               email: formData.email,
               password: formData.password,

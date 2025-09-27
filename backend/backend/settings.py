@@ -25,8 +25,8 @@ SECRET_KEY = 'django-insecure-q985#y+b5^-fopx751h#ppaem&zk65wnu7hysqmmwe#@c_a*a_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['kindle-clone-backend.onrender.com', # The backend's own address
+    'kindle-clone-rosy.vercel.app',]
 
 
 # Application definition

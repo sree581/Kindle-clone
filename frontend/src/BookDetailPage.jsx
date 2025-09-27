@@ -20,10 +20,10 @@ function BookDetailPage() {
             console.log(`Checking for Book ID: ${bookId} (Type: ${typeof bookId})`);
 
             try {
-                const bookPromise = axios.get(`http://127.0.0.1:8000/api/books/${bookId}/`);
+                const bookPromise = axios.get(`https://kindle-clone-backend.onrender.com/api/books/${bookId}/`);
                 
                 const ownershipPromise = authToken 
-                    ? axios.get('http://127.0.0.1:8000/api/my-books/', {
+                    ? axios.get('https://kindle-clone-backend.onrender.com/api/my-books/', {
                         headers: { Authorization: `Token ${authToken}` }
                       })
                     : Promise.resolve({ data: [] });

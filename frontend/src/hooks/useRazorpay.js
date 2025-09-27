@@ -15,7 +15,7 @@ const useRazorpay = () => {
 
         try {
             const orderResponse = await axios.post(
-                `http://127.0.0.1:8000/api/start-payment/${book.id}/`,
+                `https://kindle-clone-backend.onrender.com/api/start-payment/${book.id}/`,
                 {},
                 { headers: { Authorization: `Token ${authToken}` } }
             );
@@ -33,7 +33,7 @@ const useRazorpay = () => {
                 handler: async function (response) {
                     try {
                         await axios.post(
-                            'http://127.0.0.1:8000/api/verify-payment/',
+                            'https://kindle-clone-backend.onrender.com/api/verify-payment/',
                             {
                                 razorpay_payment_id: response.razorpay_payment_id,
                                 razorpay_order_id: response.razorpay_order_id,
