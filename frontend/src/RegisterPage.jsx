@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom';
 
-// --- A New SVG Library for the "Story Time" Theme ---
+
 
 const SceneBackground = () => (
     <div className="absolute inset-0 z-0">
@@ -16,47 +16,46 @@ const SceneBackground = () => (
 const BearCharacter = ({ className }) => (
     <svg className={className} viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
         <g className="animate-float">
-            <path d="M50 95 C 20 100, 5 70, 20 50 C 35 20, 65 20, 80 50 C 95 70, 80 100, 50 95" fill="#885A3B"/>
-            <path d="M50 80 C 40 85, 30 75, 35 65 C 40 55, 60 55, 65 65 C 70 75, 60 85, 50 80" fill="#D4A77C"/>
-            <circle cx="43" cy="60" r="3" fill="black"/><circle cx="57" cy="60" r="3" fill="black"/>
-            <rect x="35" y="85" width="30" height="15" rx="3" fill="#ef4444"/>
+            <path d="M50 95 C 20 100, 5 70, 20 50 C 35 20, 65 20, 80 50 C 95 70, 80 100, 50 95" fill="#885A3B" />
+            <path d="M50 80 C 40 85, 30 75, 35 65 C 40 55, 60 55, 65 65 C 70 75, 60 85, 50 80" fill="#D4A77C" />
+            <circle cx="43" cy="60" r="3" fill="black" /><circle cx="57" cy="60" r="3" fill="black" />
+            <rect x="35" y="85" width="30" height="15" rx="3" fill="#ef4444" />
         </g>
     </svg>
 );
 
 const ElephantCharacter = ({ className }) => (
-     <svg className={className} viewBox="0 0 120 100" xmlns="http://www.w3.org/2000/svg">
-        <g className="animate-float" style={{animationDelay: '-2s'}}>
-            <path d="M60 90 C 10 90, 5 40, 40 30 C 70 10, 100 20, 110 50 C 120 80, 100 90, 60 90" fill="#d1d5db"/>
-            <path d="M5 40 C -15 30, -15 60, 5 70" fill="#e5e7eb"/>
-             <rect x="-5" y="65" width="20" height="15" rx="3" fill="#60a5fa"/>
+    <svg className={className} viewBox="0 0 120 100" xmlns="http://www.w3.org/2000/svg">
+        <g className="animate-float" style={{ animationDelay: '-2s' }}>
+            <path d="M60 90 C 10 90, 5 40, 40 30 C 70 10, 100 20, 110 50 C 120 80, 100 90, 60 90" fill="#d1d5db" />
+            <path d="M5 40 C -15 30, -15 60, 5 70" fill="#e5e7eb" />
+            <rect x="-5" y="65" width="20" height="15" rx="3" fill="#60a5fa" />
         </g>
     </svg>
 );
 
 const MonkeyCharacter = ({ className }) => (
     <svg className={className} viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-        <g className="animate-float" style={{animationDelay: '-1s'}}>
-            <path d="M50 90 C 30 90, 20 70, 20 50 S 30 10, 50 10 S 80 30, 80 50 S 70 90, 50 90" fill="#A16207"/>
-            <path d="M50 80 C 40 80, 35 70, 35 55 S 40 30, 50 30 S 65 40, 65 55 S 60 80, 50 80" fill="#F7D9A3"/>
-            <circle cx="45" cy="50" r="4" fill="black"/> <circle cx="55" cy="50" r="4" fill="black"/>
+        <g className="animate-float" style={{ animationDelay: '-1s' }}>
+            <path d="M50 90 C 30 90, 20 70, 20 50 S 30 10, 50 10 S 80 30, 80 50 S 70 90, 50 90" fill="#A16207" />
+            <path d="M50 80 C 40 80, 35 70, 35 55 S 40 30, 50 30 S 65 40, 65 55 S 60 80, 50 80" fill="#F7D9A3" />
+            <circle cx="45" cy="50" r="4" fill="black" /> <circle cx="55" cy="50" r="4" fill="black" />
         </g>
     </svg>
 );
 
 const OwlCharacter = ({ className }) => (
     <svg className={className} viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-        <g className="animate-float" style={{animationDelay: '-3s'}}>
-            <path d="M50 90 C 25 90, 15 65, 20 45 S 40 10, 50 10 S 80 25, 80 45 S 75 90, 50 90" fill="#663300"/>
-            <path d="M50 75 C 35 75, 30 60, 30 50 S 35 25, 50 25 S 70 35, 70 50 S 65 75, 50 75" fill="white"/>
-            <circle cx="42" cy="50" r="8" fill="white"/>
-            <circle cx="58" cy="50" r="8" fill="white"/>
-            <circle cx="43" cy="50" r="4" fill="black"/>
-            <circle cx="57" cy="50" r="4" fill="black"/>
+        <g className="animate-float" style={{ animationDelay: '-3s' }}>
+            <path d="M50 90 C 25 90, 15 65, 20 45 S 40 10, 50 10 S 80 25, 80 45 S 75 90, 50 90" fill="#663300" />
+            <path d="M50 75 C 35 75, 30 60, 30 50 S 35 25, 50 25 S 70 35, 70 50 S 65 75, 50 75" fill="white" />
+            <circle cx="42" cy="50" r="8" fill="white" />
+            <circle cx="58" cy="50" r="8" fill="white" />
+            <circle cx="43" cy="50" r="4" fill="black" />
+            <circle cx="57" cy="50" r="4" fill="black" />
         </g>
     </svg>
 );
-
 
 function RegisterPage() {
     const [formData, setFormData] = useState({ username: '', email: '', password: '', password2: '' });
@@ -64,25 +63,53 @@ function RegisterPage() {
     const navigate = useNavigate();
 
     const handleChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
+
     const handleSubmit = async (e) => {
         e.preventDefault();
+
         if (formData.password !== formData.password2) {
             alert("Passwords do not match!");
             return;
         }
+
         setIsSubmitting(true);
+
         try {
-            await axios.post('https://kindle-clone-backend.onrender.com/api/auth/registration/', {
-              username: formData.username,
-              email: formData.email,
-              password: formData.password,
-              password2: formData.password2,
-            });
-            alert('Registration successful! Please log in to begin your adventure.');
+            const response = await axios.post(
+                'https://kindle-clone-backend.onrender.com/api/auth/registration/',
+                {
+                    username: formData.username,
+                    email: formData.email,
+                    password1: formData.password,
+                    password2: formData.password2,
+                },
+                {
+                    headers: { 'Content-Type': 'application/json' },
+                }
+            );
+
+            alert('🎉 Registration successful! Please log in to begin your adventure.');
             navigate('/login');
+
         } catch (error) {
-            console.error("Registration error:", error.response?.data);
-            alert(`Registration failed: ${JSON.stringify(error.response?.data)}`);
+            console.error("Registration error:", error);
+            let message = "Unknown error occurred";
+
+            if (error.response) {
+                if (typeof error.response.data === "object") {
+                    message = Object.entries(error.response.data)
+                        .map(([key, value]) => `${key}: ${value}`)
+                        .join("\n");
+                } else {
+                    message = error.response.data;
+                }
+            } else if (error.request) {
+                message = "No response from server. Please check your network or CORS setup.";
+            } else {
+                message = error.message;
+            }
+
+            alert(`Registration failed:\n${message}`);
         } finally {
             setIsSubmitting(false);
         }
@@ -95,7 +122,7 @@ function RegisterPage() {
                 .animate-float { animation: float 6s infinite ease-in-out; }
             `}</style>
             <SceneBackground />
-            
+
             <ElephantCharacter className="absolute w-48 h-48 bottom-10 left-10 z-10" />
             <BearCharacter className="absolute w-40 h-40 bottom-10 right-10 z-10" />
             <MonkeyCharacter className="absolute w-24 h-24 top-1/4 left-1/4 z-10" />
@@ -108,16 +135,28 @@ function RegisterPage() {
                 </div>
                 <form onSubmit={handleSubmit}>
                     <div className="mb-4">
-                        <input className="w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-lg shadow-inner focus:outline-none focus:ring-2 focus:ring-[#38bdf8] transition-all" id="username" type="text" placeholder="Your Name" name="username" onChange={handleChange} value={formData.username} required />
-                    </div>
-                     <div className="mb-4">
-                        <input className="w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-lg shadow-inner focus:outline-none focus:ring-2 focus:ring-[#38bdf8] transition-all" id="email" type="email" placeholder="Your Email" name="email" onChange={handleChange} value={formData.email} required />
+                        <input
+                            className="w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-lg shadow-inner focus:outline-none focus:ring-2 focus:ring-[#38bdf8] transition-all"
+                            id="username" type="text" placeholder="Your Name" name="username"
+                            onChange={handleChange} value={formData.username} required />
                     </div>
                     <div className="mb-4">
-                        <input className="w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-lg shadow-inner focus:outline-none focus:ring-2 focus:ring-[#38bdf8] transition-all" id="password" type="password" placeholder="Secret Password" name="password" onChange={handleChange} value={formData.password} required />
+                        <input
+                            className="w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-lg shadow-inner focus:outline-none focus:ring-2 focus:ring-[#38bdf8] transition-all"
+                            id="email" type="email" placeholder="Your Email" name="email"
+                            onChange={handleChange} value={formData.email} required />
                     </div>
-                     <div className="mb-6">
-                        <input className="w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-lg shadow-inner focus:outline-none focus:ring-2 focus:ring-[#38bdf8] transition-all" id="password2" type="password" placeholder="Confirm Password" name="password2" onChange={handleChange} value={formData.password2} required />
+                    <div className="mb-4">
+                        <input
+                            className="w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-lg shadow-inner focus:outline-none focus:ring-2 focus:ring-[#38bdf8] transition-all"
+                            id="password" type="password" placeholder="Secret Password" name="password"
+                            onChange={handleChange} value={formData.password} required />
+                    </div>
+                    <div className="mb-6">
+                        <input
+                            className="w-full px-4 py-3 bg-white border-2 border-gray-200 rounded-lg shadow-inner focus:outline-none focus:ring-2 focus:ring-[#38bdf8] transition-all"
+                            id="password2" type="password" placeholder="Confirm Password" name="password2"
+                            onChange={handleChange} value={formData.password2} required />
                     </div>
                     <button
                         className="w-full bg-gradient-to-r from-[#38bdf8] to-[#0ea5e9] hover:from-[#0ea5e9] hover:to-[#0284c7] text-white font-bold text-lg py-3 px-4 rounded-lg focus:outline-none focus:shadow-outline transition-all transform hover:scale-105 duration-300 disabled:bg-gray-400"
@@ -137,4 +176,3 @@ function RegisterPage() {
 }
 
 export default RegisterPage;
-
